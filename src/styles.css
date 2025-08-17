@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+/* Global styles for Genova Clinic */
+
+/* Custom CSS variables - New attractive color scheme */
+:root {
+  --primary-blue: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary-purple: #8b5cf6;
+  --accent-pink: #ec4899;
+  --accent-orange: #f97316;
+  --accent-teal: #14b8a6;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+}
+
+/* Global button styles - New attractive colors */
+.btn-book-now {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  border: none;
+  outline: none;
+}
+
+.btn-book-now:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue)) !important;
+}
+
+.btn-call-action {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-orange)) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  border: none;
+  outline: none;
+}
+
+.btn-call-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink)) !important;
+}
+
+/* Card shadows */
+.card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Rating stars */
+.rating-stars {
+  color: #fbbf24;
+}
+
+/* Navigation active state */
+.nav-link.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+/* Modal styles */
+.modal {
+  transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive adjustments for laptop screens */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 1023px) {
+  .modal-content {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+}

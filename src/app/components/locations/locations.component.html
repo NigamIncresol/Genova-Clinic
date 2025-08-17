@@ -1,0 +1,69 @@
+<section id="locations" class="py-12 md:py-16 bg-white">
+  <div class="container mx-auto px-4 md:px-8">
+    <h2
+      class="text-2xl md:text-3xl font-bold text-center text-primary-blue mb-8"
+    >
+      Our Clinic Locations
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-bg-light rounded-xl p-6 card-shadow">
+        <h3 class="text-xl font-bold text-text-dark mb-4">Main Clinic</h3>
+        <div class="space-y-3 text-text-light">
+          <p>
+            <strong>Address:</strong> Plot No. 123, Sector 15, Bhubaneswar,
+            Odisha 751003
+          </p>
+          <p><strong>Phone:</strong> +91 8826475269</p>
+          <p><strong>Timings:</strong> Mon-Sat: 9:00 AM - 7:00 PM</p>
+          <p><strong>Emergency:</strong> 24/7 Available</p>
+        </div>
+        <div class="mt-6">
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            class="btn-book-now px-4 py-2 rounded-full text-sm font-semibold inline-block"
+          >
+            View on Map
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-bg-light rounded-xl p-6 card-shadow">
+        <h3 class="text-xl font-bold text-text-dark mb-4">Branch Clinic</h3>
+        <div class="space-y-3 text-text-light">
+          <p>
+            <strong>Address:</strong> Medical Complex, Unit 8, Bhubaneswar,
+            Odisha 751012
+          </p>
+          <p><strong>Phone:</strong> +91 8826475269</p>
+          <p><strong>Timings:</strong> Mon-Sat: 10:00 AM - 6:00 PM</p>
+          <p><strong>Services:</strong> Consultation & Basic Procedures</p>
+        </div>
+        <div class="mt-6">
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            class="btn-book-now px-4 py-2 rounded-full text-sm font-semibold inline-block"
+          >
+            View on Map
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <h3 class="text-xl font-bold text-text-dark mb-4">Need Directions?</h3>
+      <p class="text-text-light mb-6">
+        Our clinics are easily accessible with ample parking and public
+        transport connectivity.
+      </p>
+      <button
+        (click)="openAppointmentModal()"
+        class="btn-call-action px-6 py-3 rounded-full text-lg font-bold"
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>

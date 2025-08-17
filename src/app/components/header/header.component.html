@@ -1,0 +1,194 @@
+<header
+  class="bg-white shadow-md py-3 px-4 md:px-8 flex justify-between items-center sticky top-0 z-50"
+>
+  <div class="flex items-center">
+    <a href="#home" class="flex items-center">
+      <img
+        src="https://genovahealthcare.in/wp-content/uploads/2025/06/logo-e1751608259922.png"
+        alt="Genova Clinic Logo"
+        class="h-10 w-auto mr-3 rounded"
+      />
+      <span class="text-xl md:text-2xl font-bold text-primary-blue"
+        >Genova Clinic</span
+      >
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex ml-6 space-x-4">
+      <a
+        href="#home"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'home'"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'about'"
+        >About Dr. Nilotpala</a
+      >
+      <a
+        href="#services"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'services'"
+        >Services</a
+      >
+      <a
+        href="#locations"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'locations'"
+        >Locations</a
+      >
+      <a
+        href="#testimonials"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'testimonials'"
+        >Testimonials</a
+      >
+      <a
+        href="#contact"
+        class="nav-link text-gray-700 hover:text-primary-blue transition duration-300 text-sm"
+        [class.active]="activeSection === 'contact'"
+        >Contact Us</a
+      >
+    </nav>
+  </div>
+
+  <div class="flex items-center space-x-3">
+    <!-- Desktop Phone Number -->
+    <a
+      href="tel:+918826475269"
+      class="hidden md:block text-primary-blue font-semibold hover:underline text-sm"
+    >
+      Call Now: +91 8826475269
+    </a>
+
+    <!-- Book Appointment Button -->
+    <button
+      (click)="openAppointmentModal()"
+      class="btn-book-now px-4 py-2 rounded-full font-semibold text-sm"
+    >
+      Book Appointment
+    </button>
+
+    <!-- Mobile Menu Button -->
+    <button
+      (click)="toggleMobileMenu()"
+      class="lg:hidden p-2 text-gray-700 hover:text-primary-blue"
+      aria-label="Toggle mobile menu"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          [attr.d]="
+            isMobileMenuOpen
+              ? 'M6 18L18 6M6 6l12 12'
+              : 'M4 6h16M4 12h16M4 18h16'
+          "
+        ></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Sidebar -->
+  <div class="fixed inset-0 z-50 lg:hidden" [class.hidden]="!isMobileMenuOpen">
+    <!-- Backdrop -->
+    <div
+      class="absolute inset-0 bg-black bg-opacity-50"
+      (click)="toggleMobileMenu()"
+    ></div>
+
+    <!-- Sidebar -->
+    <div
+      class="absolute right-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out"
+    >
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <div class="flex items-center">
+            <img
+              src="https://genovahealthcare.in/wp-content/uploads/2025/06/logo-e1751608259922.png"
+              alt="Genova Clinic Logo"
+              class="h-8 w-auto mr-2 rounded"
+            />
+            <h3 class="text-lg font-bold text-primary-blue">Menu</h3>
+          </div>
+          <button
+            (click)="toggleMobileMenu()"
+            class="text-gray-500 hover:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Links -->
+        <nav class="space-y-4">
+          <a
+            href="#home"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'home'"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'about'"
+            >About Dr. Nilotpala</a
+          >
+          <a
+            href="#services"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'services'"
+            >Services</a
+          >
+          <a
+            href="#locations"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'locations'"
+            >Locations</a
+          >
+          <a
+            href="#testimonials"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'testimonials'"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-primary-blue transition duration-300 py-2 border-b border-gray-100"
+            [class.active]="activeSection === 'contact'"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Mobile Phone Number -->
+        <div class="mt-8 pt-4 border-t border-gray-200">
+          <a
+            href="tel:+918826475269"
+            class="block text-primary-blue font-semibold hover:underline text-center py-2"
+          >
+            Call Now: +91 8826475269
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
